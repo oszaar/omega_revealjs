@@ -1,0 +1,30 @@
+title: Omega_revealjs
+author: oszaar
+version: 1.0.0
+quarto-required: ">=1.7.0"
+contributes:
+  formats:
+    revealjs:
+      theme: [custom.scss]
+      width: 1920
+      height: 1080
+      auto-stretch: false
+      lightbox: true
+      transition: "fade"
+      transition-speed: "fast"
+      smaller: false
+      incremental: false
+      scrollable: false
+      slide-level: 2
+      progress: true
+      date-format: "YYYY-MMM-DD"
+      fig-align: left
+      slide-number: true
+      chalkboard: true
+      callout-icon: true
+      title-slide-attributes:
+        data-background-color: "#000000"
+        # data-background-image: "omega_background_no_logos.svg"
+        data-background-size: "cover"
+      logo: omega_logo_white.svg
+
