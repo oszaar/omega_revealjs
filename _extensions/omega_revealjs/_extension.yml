@@ -8,6 +8,7 @@ contributes:
       theme: [custom.scss]
       width: 1920
       height: 1080
+      # margin: 0
       auto-stretch: false
       lightbox: true
       transition: "fade"
@@ -22,9 +23,12 @@ contributes:
       slide-number: true
       chalkboard: true
       callout-icon: true
+      template-partials:
+        - title-slide.html
       title-slide-attributes:
-        data-background-color: "#000000"
-        data-background-image: "background.svg"
+        # data-background-color: "#000000"
+        data-background-image: "vertical_split.svg"
         data-background-size: "cover"
-      logo: logo.svg
+      # logo: logo.svg
+
 

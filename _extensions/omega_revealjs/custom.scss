@@ -9,19 +9,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Palatino:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* colors */
-$primary-color: #23373b !default;
-$primary: #4C979F;
-$secondary: #A6CBCF;
-$tertiary: #D1E5E6;
-$link-color: #79B1B7;
-$body-color: #1c2833;
-$code-color: #496985;
+
+$pale-blue: #496985;
 $code-block-bg: WhiteSmoke;
 $light-blue: #56B4E9 !default;
 $pale-blue: #CEE9FF !default;
-$dark-blue: #447099 !default;
+$dark-blue: #003a6c !default;
 $light-grey: #EDEEEF !default;
 $grayish-black: #474747 !default;
 $greenish-black: #23373B !default;
@@ -32,13 +29,20 @@ $link-color: #80a9d7;
 $body-color: #22304e;
 $gray: #ADADAD; 
 
+$primary-color: $pale-blue;
+$primary: #4C979F;
+$secondary: #A6CBCF;
+$tertiary: #D1E5E6;
+$link-color: #79B1B7;
+$body-color: #000000;
+$code-color: #496985;
+$background: #ffffff;
+
 /* fonts */
-$font-family-sans-serif: 'Lucida Sans', 'Fira Sans', 'Nunito', 'Open Sans', 'sans-serif';
-$font-family-serif: 'Lucida Sans', 'Palatino', 'Times', 'serif';
-$font-family-monospace: 'Iosevka', 'Fira Mono','Ubuntu Mono', 'Lucida Console', 'Courier', 'Iosevka';
-$presentation-h-font12:	"Roboto", sans-serif !default; 
-$presentation-h-font36: "Roboto", sans-serif !default; 
-$code-block-border-color: none;
+$font-family-sans-serif: 'Libertinus Serif', 'Lucida Sans', 'Fira Sans', 'Nunito', 'Open Sans', 'sans-serif';
+$font-family-serif: 'Libertinus Serif', 'Lucida Sans', 'Palatino', 'Times', 'serif';
+$font-family-monospace: 'Atkinson Hyperlegible Mono', 'Iosevka', 'Fira Mono','Ubuntu Mono', 'Lucida Console', 'Courier', 'Iosevka';
+$code-block-border-color: $light-grey !default;
 $code-bg: $code-block-bg; /* inline code */
 
 /* presentation */
@@ -57,8 +61,7 @@ $header-bg-color: $primary-color !default;
 
 /*-- scss:rules --*/
 
-/* font */
-/* major third scale */
+/* font helper sizes for random stuf which I hope wont be necessary */
 .largest { font-size: 1.953em;}
 .larger { font-size: 1.563em;}
 .large { font-size: 1.25em;}
@@ -94,12 +97,24 @@ $header-bg-color: $primary-color !default;
   }
 }
 
-// .reveal .slide-background-content {
-//   background-image: linear-gradient(#80b882, #37578b) !important;
-// }
+/* -------- body ---------*/
+p {
+  font-family: $font-family-serif;
+  font-size: $presentation-h6-font-size;
+  line-height: $presentation-line-height;
+  margin-bottom: 0.5em;
+  color: $body-color;
+}
+.reveal aside {
+  font-family: $font-family-monospace;
+  font-size: $presentation-h6-font-size;
+  line-height: 0.5em;
+  margin-bottom: 0.0em;
+  color: $body-color;
+}
 
 .accent {
-  color: $orange;
+  color: $primary-color;
 }
 
 .inv_accent {
@@ -110,25 +125,25 @@ $header-bg-color: $primary-color !default;
 .reveal h1, h2 {
   // color: $dark-blue;
   font-weight: bold;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
 
 }
 .reveal h2 {
   margin-bottom: 0.5em;
-  // color: $dark-blue;
+  color: $primary-color;
   font-weight: bold;
   font-family: $font-family-serif;
   
 }
-.reveal h2::after {
-  content: "";
-  display: block;
-  border-radius: 5px;
-  background-color: #00A6AA; /* Customize this color as needed */
-  height: 4px; /* Thickness of the divider */
-  width: 100%; /* Adjust to fit your design */
-  margin: 0.1em auto 0; /* Adds spacing and centers the line */
-}
+// .reveal h2::after {
+//   content: "";
+//   display: block;
+//   border-radius: 5px;
+//   background-color: $primary-color; /* Customize this color as needed */
+//   height: 6px; /* Thickness of the divider */
+//   width: 100%; /* Adjust to fit your design */
+//   margin: 0.1em auto 0; /* Adds spacing and centers the line */
+// }
 
 .reveal pre {
   line-height: 1.3;
@@ -158,7 +173,7 @@ $header-bg-color: $primary-color !default;
 }
 
 .reveal .slide-number {
-  font-family: "Source Sans Pro";
+  font-family: $font-family-monospace;
 }
 
 .reveal .blockquote {
@@ -184,13 +199,6 @@ $header-bg-color: $primary-color !default;
   }
 }
 
-// .reveal div.csl-entry::before {
-//   content: $book-icon;
-// }
-
-.reveal .slide-background.title-slide {
-  background-color: $primary-color;
-}
 
 /* text alignment */
 
@@ -222,16 +230,23 @@ $header-bg-color: $primary-color !default;
   margin-bottom: 0.4em !important;
 }
 
-/* slide alignment */
 
-.reveal .slides section[data-vertical-align-top]{
-	top: 0 !important;
+/* -- images */
+.reveal img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  align-self: center;
+  border-radius: 10px;
+  // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .reveal .slide {
   figure>figcaption {
-    font-size: 0.80em;
+    font-size: 0.70em;
     text-align: center;
+    padding: 0.0em;
   }
 }
 
@@ -257,7 +272,7 @@ $header-bg-color: $primary-color !default;
 /* callout */
 
 .reveal .callout {
-  border-radius: 0.5 !important;
+  border-radius: 0.9 !important;
 }
 
 .reveal .callout-style-simple {
@@ -295,7 +310,7 @@ $header-bg-color: $primary-color !default;
 }
 
 .reveal div.callout-note.callout-style-default .callout-title {
-  background-color: $secondary;
+  background-color: $primary-color;
 }
 
 .reveal div.callout-note .callout-icon::before {
@@ -322,32 +337,13 @@ $header-bg-color: $primary-color !default;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTYiIHdpZHRoPSIxNiIgZmlsbD0iIzFjMjgzMyIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjwhLS0hRm9udCBBd2Vzb21lIEZyZWUgNi41LjEgYnkgQGZvbnRhd2Vzb21lIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20gTGljZW5zZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tL2xpY2Vuc2UvZnJlZSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4tLT48cGF0aCBkPSJNNDE2IDM5OC45YzU4LjUtNDEuMSA5Ni0xMDQuMSA5Ni0xNzQuOUM1MTIgMTAwLjMgMzk3LjQgMCAyNTYgMFMwIDEwMC4zIDAgMjI0YzAgNzAuNyAzNy41IDEzMy44IDk2IDE3NC45YzAgLjQgMCAuNyAwIDEuMXY2NGMwIDI2LjUgMjEuNSA0OCA0OCA0OGg0OFY0NjRjMC04LjggNy4yLTE2IDE2LTE2czE2IDcuMiAxNiAxNnY0OGg2NFY0NjRjMC04LjggNy4yLTE2IDE2LTE2czE2IDcuMiAxNiAxNnY0OGg0OGMyNi41IDAgNDgtMjEuNSA0OC00OFY0MDBjMC0uNCAwLS43IDAtMS4xek05NiAyNTZhNjQgNjQgMCAxIDEgMTI4IDBBNjQgNjQgMCAxIDEgOTYgMjU2em0yNTYtNjRhNjQgNjQgMCAxIDEgMCAxMjggNjQgNjQgMCAxIDEgMC0xMjh6Ii8+PC9zdmc+') !important;
 }
 
-// .reveal div.reveal-header {
-//   display: grid;
-//   grid-template-columns: 3fr 0.35fr;
-//   grid-template-areas: "ht logo";
-//   column-gap: 10px;
-//   align-items: center;
-//   top: -5px;
-//   margin: 3.2px 0px 2px 0px;
-//   width: 100%;
-//   position: fixed;
-//   background: $primary-color;
-//   z-index: 5;
-  
-// .reveal .header-title h2 {
-//     color: #fff !important;
-//   }
-// }
-
-
 /* tables */
 
 .slides table {
     
   margin-bottom: 0.80em;
-  border-top: 2px solid lighten(#505453, 5%);
-  border-bottom: 2px solid lighten(#505453, 5%);
+  border-top: 3px solid lighten(#505453, 5%);
+  border-bottom: 3px solid lighten(#505453, 5%);
   
   th, td {
     border: none;
@@ -356,7 +352,7 @@ $header-bg-color: $primary-color !default;
   }
   
   thead th {
-    font-weight: normal;
+    font-weight: bold;
   }
   
   thead th,
@@ -366,13 +362,6 @@ $header-bg-color: $primary-color !default;
   
 }
 
-// .reveal table {
-//   font-size: 0.8em !important;
-//   margin: 0;
-//   align-self: center;
-// }
-
-/* datatable components */
 
 .reveal .dataTables_wrapper .dataTables_length, 
 .reveal .dataTables_wrapper .dataTables_filter,
@@ -399,119 +388,108 @@ $header-bg-color: $primary-color !default;
 }
 
 /* title slide */
-
-
 #title-slide .title {
   font-size: $presentation-h1-font-size;
   margin: 0;
-  font-weight: normal;
-  // color: white;
+  font-weight: bold;
+  color: $background;
   
 }
 
 #title-slide .subtitle {
   font-size: $presentation-h3-font-size;
+  font-family: $font-family-serif;
   margin: 0;
-  margin-bottom: 0.8em !important;
+  margin-bottom: 0.2em !important;
   margin-top: 0.2em !important;
+  color: $background
+
 }
 
 #title-slide .quarto-title-authors {
-  font-size: $presentation-h4-font-size;
+  font-size: $presentation-h5-font-size;
+  font-family: $font-family-serif;
   display: block;
   margin: 0;
   padding-left: 0;
+  padding-top: 1em;
+  color: $primary-color
   // color: white;
 }
 
 #title-slide .quarto-title-author {
   padding-left: 0;
+  font-size: $presentation-h6-font-size;
   // color: white;
 }
 
 #title-slide .institute, #title-slide .author {
+  font-family: $font-family-serif;
   font-size: $presentation-h6-font-size;
-  font-family: $font-family-sans-serif;
-  font-weight: lighter;
+  // font-weight: lighter;
   margin: 0;
-  // color: white;
+  color: $primary-color;
 }
 
 #title-slide .date {
   font-size: $presentation-h6-font-size;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
   font-weight: lighter;
   margin: 0;
-  color: white;
+  color: $primary-color;
 }
 
-.reveal .slide-background-content {
-  background-position: right;
-}
-
-#title-slide .title-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  // background-color: $code-block-bg;
-  // opacity: 0.3;
+#title-slide .quarto-title-affiliation {
+  font-size: $presentation-h6-font-size;
+  font-family: $font-family-serif;
+  margin: 0;
+  color: $primary-color;
 }
 
 #title-slide {
-  p.author::before, div.quarto-title-author::before {
+  p.author::before, div.quarto-title-subtitle::before {
     content: "";
     display: block;
     border: none;
-    // border: 1px solid $dark-blue;
+    border: 1px solid $dark-blue;
     border-radius: 5px;
     margin-bottom: 30px;
-    background-color: #00A6AA;
-    height: 4px;
-    margin-bottom: 0.8em;
+    background-color: #00A6AA; /* Originally a horizontal div */
+    height: 10px;
+    width: 100%;
+    // margin-bottom: 0.0em !important;
+    margin: 0 !important
   }
 }
+
+// #title-slide {
+//   p.author::before, div.quarto-title-author::before {
+//     content: "";
+//     display: block;
+//     border: none;
+//     // border: 1px solid $dark-blue;
+//     border-radius: 5px;
+//     margin-bottom: 30px;
+//     background-color: #00A6AA;
+//     height: 40dvh;
+//     width: 100%;
+//     margin-bottom: 0.8em;
+//   }
+// }
 
 #title-slide .title-parent {
   display: -ms-grid;
   display: grid;
   margin: auto;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 2em;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  grid-column-gap: 2em;
+  margin-top: 0 !important;
+  // grid-column-gap: 2em;
   /*grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));*/
-}
-
-#title-slide .title-one {
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  grid-template-areas: "text";
-}
-
-#title-slide .title-two {
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "text hero";
-}
-
-#title-slide .title-child-text {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: text;
-  text-align: left;
-}
-
-#title-slide .title-child-hero {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: hero;
 }
 
 /* citation */
@@ -519,7 +497,7 @@ $header-bg-color: $primary-color !default;
 .reveal .citation,
 .reveal .citation a:hover {
   font-size: 0.8em;
-  color: lightgray;
+  color: $primary;
 }
 
 .reveal .citation a {
@@ -530,3 +508,37 @@ $header-bg-color: $primary-color !default;
 .references {
   font-size: 0.8em;
 }
+
+
+
+/* -- Ugly workaround for placing the title content where I wanted it -- */
+
+/* ---------- top half ---------- */
+.title-area {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end ;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 0.0em;
+  padding-top: 2em;
+}
+
+/* ---------- bottom half ---------- */
+.meta-area {
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-top: 4em;
+  font-family: $font-family-serif;
+  color: $primary-color;
+}
+
+.meta-area a { color: inherit; text-decoration: underline; }
+.date       { margin-top: 1em; font-style: italic; }

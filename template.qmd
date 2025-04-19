@@ -1,32 +1,103 @@
 ---
 title: Untitled
-subtitle: Subtitle
+subtitle: Pariatur sit qui magna quis est irure Lorem tempor exercitation mollit incididunt. Proident Lorem aliqua esse do velit ea ullamco ea laborum deserunt.
 description: Description
-author: Author
-institute: Affiliation
+author:
+  - name: Norah Jones
+    affiliation: 
+      - Carnegie Mellon University
 format:
   omega_revealjs-revealjs: default
 date: today
 bibliography: [references.bib]
+csl: science_without_titles.csl
+filters: 
+  - "_extensions/omega_revealjs/mhchem.lua"
 ---
+# Section 1 {background-color="#496985" background-size="cover" background-position="center" background-repeat="no-repeat"}
 
-## Introduction
+A transition / Wake up! slide with a background color and a title.
 
-*TODO* Create an example file that demonstrates the formatting and features of your format.
+## Heading 1 with citation
 
-## More Information
+{{< lipsum 1 >}}[see @doumont2009, pp. 33-35; also -@doumont2009, chap. 1]
 
-You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
+::: aside
 
-## 
+A callout with some information.
+
+:::
+
+## Random stuff
+
+### Equations
+
+$$
+\frac{x}{y}
+$$
+
+[Text with accent color]{.accent}
+[Text with inverse accent color]{.inv_accent}
+
+## Tables
+
+| Header 1 | Header 2 | Header 3 |
+| :-------- | :------: | -------: |
+| Row 1    |  Row 1   |    Row 1 |
+| Row 2    |  Row 2   |    Row 2 |
+| Row 3    |  Row 3   |    Row 3 |
+
+A random table with different alignments.
+
+::: footer
+
+A footer with some information.
+
+:::
+
+## Figures
+
+A random figure with a rounded border and slightly shaded
+
+
+![Caption of the figure]({{< placeholder 400 400 format=svg >}}){fig-align="center" style="border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);" width=100%,}
+
+A Slightly shaded figure with a rounded border and a caption. By default fig align is set to center from the scss file but could be overridden in the figure `{.fig-align = 'center'}`.
+
+
+## Callouts
+
+{{< lipsum 1 >}}
 
 ::: {.callout-important}
 A callout with important information.
 :::
 
+::: {.callout-note}
+A callout with a note.
+:::
 
-# {background-image="https://picsum.photos/id/29/4000/2670" background-size="cover" background-position="center" background-repeat="no-repeat"}
 
-a random content
+## Column content
+
+::: {.columns}
+::: {.column}
+{{< lipsum 1 >}}
+:::
+::: {.column}
+{{< lipsum 1 >}}
+:::
+:::
+
+## Chemical notation with mhchem.lua
+
+\ce{H2O}
+
+
+# Final slide with image {background-image="https://picsum.photos/id/29/4000/2670" background-size="cover" background-position="center" background-repeat="no-repeat"}
+
+
+
 
 ## References
+
