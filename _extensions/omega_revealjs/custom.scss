@@ -38,14 +38,14 @@ $body-color: #000000;
 $code-color: #496985;
 $background: #ffffff;
 
-/* fonts */
+// /* fonts */
 $font-family-sans-serif: 'Libertinus Serif', 'Lucida Sans', 'Fira Sans', 'Nunito', 'Open Sans', 'sans-serif';
 $font-family-serif: 'Libertinus Serif', 'Lucida Sans', 'Palatino', 'Times', 'serif';
 $font-family-monospace: 'Atkinson Hyperlegible Mono', 'Iosevka', 'Fira Mono','Ubuntu Mono', 'Lucida Console', 'Courier', 'Iosevka';
 $code-block-border-color: $light-grey !default;
 $code-bg: $code-block-bg; /* inline code */
 
-/* presentation */
+// /* presentation */
 $presentation-font-size-root: 40px;
 $presentation-line-height: 1.35;
 $presentation-h1-font-size: 1.9em;
@@ -56,12 +56,11 @@ $presentation-h5-font-size: 1.125em;
 $presentation-h6-font-size: 1em;
 $presentation-title-slide-text-align: left !default;
 $presentation-slide-text-align: left !default;
-
 $header-bg-color: $primary-color !default;
 
-/*-- scss:rules --*/
+// /*-- scss:rules --*/
 
-/* font helper sizes for random stuf which I hope wont be necessary */
+// /* font helper sizes for random stuf which I hope wont be necessary */
 .largest { font-size: 1.953em;}
 .larger { font-size: 1.563em;}
 .large { font-size: 1.25em;}
@@ -97,7 +96,7 @@ $header-bg-color: $primary-color !default;
   }
 }
 
-/* -------- body ---------*/
+// /* -------- body ---------*/
 p {
   font-family: $font-family-serif;
   font-size: $presentation-h6-font-size;
@@ -133,17 +132,17 @@ p {
   color: $primary-color;
   font-weight: bold;
   font-family: $font-family-serif;
-  
 }
-// .reveal h2::after {
-//   content: "";
-//   display: block;
-//   border-radius: 5px;
-//   background-color: $primary-color; /* Customize this color as needed */
-//   height: 6px; /* Thickness of the divider */
-//   width: 100%; /* Adjust to fit your design */
-//   margin: 0.1em auto 0; /* Adds spacing and centers the line */
-// }
+
+.reveal h2::after {
+  content: "";
+  display: block;
+  border-radius: 5px;
+  background-color: $primary-color; /* Customize this color as needed */
+  height: 6px; /* Thickness of the divider */
+  width: 100%; /* Adjust to fit your design */
+  margin: 0.1em auto 0; /* Adds spacing and centers the line */
+}
 
 .reveal pre {
   line-height: 1.3;
@@ -201,7 +200,6 @@ p {
 
 
 /* text alignment */
-
 .reveal .left {
   display: block;
   text-align: left;
@@ -250,8 +248,7 @@ p {
   }
 }
 
-/* badge */
-
+// /* badge */
 .badge {
   background-color: $primary;
   color: white;
@@ -337,29 +334,23 @@ p {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTYiIHdpZHRoPSIxNiIgZmlsbD0iIzFjMjgzMyIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjwhLS0hRm9udCBBd2Vzb21lIEZyZWUgNi41LjEgYnkgQGZvbnRhd2Vzb21lIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20gTGljZW5zZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tL2xpY2Vuc2UvZnJlZSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4tLT48cGF0aCBkPSJNNDE2IDM5OC45YzU4LjUtNDEuMSA5Ni0xMDQuMSA5Ni0xNzQuOUM1MTIgMTAwLjMgMzk3LjQgMCAyNTYgMFMwIDEwMC4zIDAgMjI0YzAgNzAuNyAzNy41IDEzMy44IDk2IDE3NC45YzAgLjQgMCAuNyAwIDEuMXY2NGMwIDI2LjUgMjEuNSA0OCA0OCA0OGg0OFY0NjRjMC04LjggNy4yLTE2IDE2LTE2czE2IDcuMiAxNiAxNnY0OGg2NFY0NjRjMC04LjggNy4yLTE2IDE2LTE2czE2IDcuMiAxNiAxNnY0OGg0OGMyNi41IDAgNDgtMjEuNSA0OC00OFY0MDBjMC0uNCAwLS43IDAtMS4xek05NiAyNTZhNjQgNjQgMCAxIDEgMTI4IDBBNjQgNjQgMCAxIDEgOTYgMjU2em0yNTYtNjRhNjQgNjQgMCAxIDEgMCAxMjggNjQgNjQgMCAxIDEgMC0xMjh6Ii8+PC9zdmc+') !important;
 }
 
-/* tables */
-
+// /* tables */
 .slides table {
-    
   margin-bottom: 0.80em;
   border-top: 3px solid lighten(#505453, 5%);
   border-bottom: 3px solid lighten(#505453, 5%);
-  
   th, td {
     border: none;
     padding: 0.20em;
     font-size: 0.90em;
   }
-  
   thead th {
     font-weight: bold;
   }
-  
   thead th,
   tr:last-child td {
     border-bottom: 1px solid lighten(#505453, 10%);
   }
-  
 }
 
 
@@ -372,7 +363,6 @@ p {
 }
 
 /* panel tabset */
-
 .reveal .panel-tabset [role="tab"][aria-selected="true"] {
   border: lightgray 2px solid;
   border-radius: 6px 6px 0px 0px;
@@ -389,12 +379,12 @@ p {
 
 /* title slide */
 #title-slide .title {
+  font-family: $font-family-serif;
   font-size: $presentation-h1-font-size;
   margin: 0;
   font-weight: bold;
   color: $background;
-  
-}
+  }
 
 #title-slide .subtitle {
   font-size: $presentation-h3-font-size;
@@ -403,18 +393,14 @@ p {
   margin-bottom: 0.2em !important;
   margin-top: 0.2em !important;
   color: $background
-
 }
 
 #title-slide .quarto-title-authors {
   font-size: $presentation-h5-font-size;
   font-family: $font-family-serif;
-  display: block;
-  margin: 0;
-  padding-left: 0;
+  // display: block;
   padding-top: 1em;
   color: $primary-color
-  // color: white;
 }
 
 #title-slide .quarto-title-author {
@@ -462,21 +448,6 @@ p {
   }
 }
 
-// #title-slide {
-//   p.author::before, div.quarto-title-author::before {
-//     content: "";
-//     display: block;
-//     border: none;
-//     // border: 1px solid $dark-blue;
-//     border-radius: 5px;
-//     margin-bottom: 30px;
-//     background-color: #00A6AA;
-//     height: 40dvh;
-//     width: 100%;
-//     margin-bottom: 0.8em;
-//   }
-// }
-
 #title-slide .title-parent {
   display: -ms-grid;
   display: grid;
@@ -492,12 +463,11 @@ p {
   /*grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));*/
 }
 
-/* citation */
-
+// /* citation */
 .reveal .citation,
 .reveal .citation a:hover {
   font-size: 0.8em;
-  color: $primary;
+  color: $dark-grey;
 }
 
 .reveal .citation a {
@@ -511,7 +481,7 @@ p {
 
 
 
-/* -- Ugly workaround for placing the title content where I wanted it -- */
+// /* -- Ugly workaround for placing the title content where I wanted it -- */
 
 /* ---------- top half ---------- */
 .title-area {
@@ -523,6 +493,7 @@ p {
   padding-right: 1.5em;
   padding-bottom: 0.0em;
   padding-top: 2em;
+  font-family: $font-family-serif;
 }
 
 /* ---------- bottom half ---------- */

@@ -3,9 +3,9 @@ title: Untitled
 subtitle: Pariatur sit qui magna quis est irure Lorem tempor exercitation mollit incididunt. Proident Lorem aliqua esse do velit ea ullamco ea laborum deserunt.
 description: Description
 author:
-  - name: Norah Jones
+  - name: John Doe
     affiliation: 
-      - Carnegie Mellon University
+      - University of Somewhere
 format:
   omega_revealjs-revealjs: default
 date: today
@@ -14,6 +14,7 @@ csl: science_without_titles.csl
 filters: 
   - "_extensions/omega_revealjs/mhchem.lua"
 ---
+
 # Section 1 {background-color="#496985" background-size="cover" background-position="center" background-repeat="no-repeat"}
 
 A transition / Wake up! slide with a background color and a title.
@@ -93,11 +94,6 @@ A callout with a note.
 
 \ce{H2O}
 
-
 # Final slide with image {background-image="https://picsum.photos/id/29/4000/2670" background-size="cover" background-position="center" background-repeat="no-repeat"}
 
-
-
-
 ## References
-
