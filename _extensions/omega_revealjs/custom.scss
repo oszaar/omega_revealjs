@@ -26,7 +26,6 @@ $dark-grey: #6C7B7F !default;
 $pink: #EC99C6 !default;
 $orange: #F0B500 !default;
 $link-color: #80a9d7;
-$body-color: #22304e;
 $gray: #ADADAD; 
 
 $primary-color: $pale-blue;
@@ -97,13 +96,14 @@ $header-bg-color: $primary-color !default;
 }
 
 // /* -------- body ---------*/
-p {
-  font-family: $font-family-serif;
-  font-size: $presentation-h6-font-size;
-  line-height: $presentation-line-height;
-  margin-bottom: 0.5em;
-  color: $body-color;
-}
+// p {
+//   font-family: $font-family-serif;
+//   font-size: $presentation-h6-font-size;
+//   line-height: $presentation-line-height;
+//   margin-bottom: 0.5em;
+//   // color: $body-color;
+// }
+
 .reveal aside {
   font-family: $font-family-monospace;
   font-size: $presentation-h6-font-size;
@@ -120,25 +120,33 @@ p {
   color: $grayish-black;
 }
 
+// h2 {
+//   font-family: $font-family-serif;
+//   font-size: $presentation-h2-font-size;
+//   line-height: $presentation-line-height;
+//   margin-bottom: 0.5em;
+//   color: $primary-color;
+// }
 
 .reveal h1, h2 {
   // color: $dark-blue;
   font-weight: bold;
   font-family: $font-family-serif;
+  // color: $primary-color;
 
 }
 .reveal h2 {
   margin-bottom: 0.5em;
-  color: $primary-color;
   font-weight: bold;
   font-family: $font-family-serif;
+  color: $primary-color !important;
 }
 
 .reveal h2::after {
   content: "";
   display: block;
   border-radius: 5px;
-  background-color: $primary-color; /* Customize this color as needed */
+  // background-color: $primary-color; /* Customize this color as needed */
   height: 6px; /* Thickness of the divider */
   width: 100%; /* Adjust to fit your design */
   margin: 0.1em auto 0; /* Adds spacing and centers the line */
@@ -240,11 +248,22 @@ p {
   // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.reveal figure {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  align-self: center;
+  border-radius: 10px;
+  // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .reveal .slide {
   figure>figcaption {
     font-size: 0.70em;
     text-align: center;
     padding: 0.0em;
+    color: $primary-color;
   }
 }
 
@@ -492,7 +511,7 @@ p {
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-bottom: 0.0em;
-  padding-top: 2em;
+  padding-top: 5em;
   font-family: $font-family-serif;
 }
 
@@ -506,7 +525,7 @@ p {
   justify-content: start;
   padding-right: 1.5em;
   padding-left: 1.5em;
-  padding-top: 4em;
+  padding-top: 0.6em;
   font-family: $font-family-serif;
   color: $primary-color;
 }

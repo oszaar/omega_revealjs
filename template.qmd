@@ -12,7 +12,7 @@ date: today
 bibliography: [references.bib]
 csl: science_without_titles.csl
 filters: 
-  - "_extensions/omega_revealjs/mhchem.lua"
+  - "mhchem.lua"
 ---
 
 # Section 1 {background-color="#496985" background-size="cover" background-position="center" background-repeat="no-repeat"}
